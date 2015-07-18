@@ -60,5 +60,5 @@ def watch_star_wars():
 def configure_net():
     """Configures network interface."""
     with settings(warn_only=True):
-        local('ifconfig eth0 0.0.0.0') #change ip_address to your ip_address
-	local('route add default gateway 0.0.0.1') #change gateway to your default gateway
+        local('ifconfig eth0 0.0.0.0') #change 0.0.0.0 to your ip_address
+	local('route add default gateway 0.0.0.1') #change 0.0.0.1 to your default gateway ip_address
