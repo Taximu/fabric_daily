@@ -49,8 +49,7 @@ def autoremove_packages():
 
 def update_system():
     """Update system."""
-    local('apt-get update')
-    local('apt-get -y upgrade')
+    local('apt-get -y update')
     local('apt-get -y dist-upgrade')
 
 def watch_star_wars():
