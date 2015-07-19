@@ -4,7 +4,7 @@
 Automated scripts to perform daily tasks. Automation tool: Fabric.
 ## Setup for development
     cd /root && git clone https://github.com/Taximu/fabric_daily.git && sudo apt-get install -y fabric
-## Setup for deploy/testing
+## Setup for testing
     cd root/fabric_daily && sudo fab <function_name>
 ## To see available functions:
     fab --list
