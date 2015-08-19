@@ -18,7 +18,7 @@ def install_packages():
     """Installs extra packages on the system."""
     with settings(warn_only=True):
         local('apt-get install -y mc htop vim lynx byobu nethogs')
-        local('apt-get install -y nload iptraf acpi sl rbase ranger')
+        local('apt-get install -y nload iptraf acpi sl r-base ranger')
         local('add-apt-repository ppa:webupd8team/sublime-text-2')
         local('apt-get update')
         local('apt-get install -y sublime-text')
