@@ -17,6 +17,9 @@ para_log.setLevel(logging.ERROR)
 def install_packages():
     """Installs extra packages on the system."""
     with settings(warn_only=True):
+    	local('sudo apt-get install -y python')
+    	local('sudo apt-get install -y python-pip')
+    	local('sudo pip install typetrainer')
         local('apt-get install -y mc htop vim lynx byobu nethogs')
         local('apt-get install -y nload iptraf acpi sl r-base ranger')
         local('add-apt-repository ppa:webupd8team/sublime-text-2')
