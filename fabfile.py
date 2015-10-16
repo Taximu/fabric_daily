@@ -61,3 +61,13 @@ def configure_net():
     with settings(warn_only=True):
         local('ifconfig eth0 0.0.0.0') #change 0.0.0.0 to your ip_address
 	local('route add default gateway 0.0.0.1') #change 0.0.0.1 to your default gateway ip_address
+
+def install_wego():
+    """Installs weather application."""
+    local('apt-get install golang')
+    local('mkdir ~/workspace')
+    local("echo 'export GOPATH=\"$HOME/workspace\"' >> ~/.bashrc")
+    local('source ~/.bashrc')
+    local('go get github.com/schachmat/wego')
+    local("echo 'export PATH=\"$PATH:$GOPATH/bin\"' >> ~/.bashrc")
+    local('source ~/.bashrc')
